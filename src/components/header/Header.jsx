@@ -18,6 +18,9 @@ export const Header = () => {
           </a>
           <nav>
             <ul>
+              <li>
+                <a href="https://logisticacastrofallas.com">Home</a>
+              </li>
               {nav.map((link) => (
                 <li key={link.id}>
                   <Link to={link.url}>{link.text}</Link>

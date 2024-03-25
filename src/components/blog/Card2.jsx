@@ -49,25 +49,27 @@ export const Card2 = () => {
       <section className="blog">
         <div className="container grid3">
           {noticias.length > 0 ? (
-            noticias.map((item) => (
-              <div className="box boxItems" key={item.id}>
-                <div className="img">
-                  <img src={item.imagen} alt="" />
-                </div>
-                <div className="details">
-                  <Link to={`/empleo/details/${item.id}`} className="link">
-                    <h3>{item.titulo}</h3>
-                  </Link>
-                  <p>{item.descripcion.slice(0, 180)}...</p>
-                  <div className="date">
-                    <AiOutlineClockCircle className="icon" />{" "}
-                    <label htmlFor="">
-                      {formatDate(item.fechaCreacionAuditoria)}
-                    </label>
+            noticias
+              .filter((item) => item.estado === 1)
+              .map((item) => (
+                <div className="box boxItems" key={item.id}>
+                  <div className="img">
+                    <img src={item.imagen} alt="" />
+                  </div>
+                  <div className="details">
+                    <Link to={`/empleo/details/${item.id}`} className="link">
+                      <h3>{item.titulo}</h3>
+                    </Link>
+                    <p>{item.descripcion.slice(0, 180)}...</p>
+                    <div className="date">
+                      <AiOutlineClockCircle className="icon" />{" "}
+                      <label htmlFor="">
+                        {formatDate(item.fechaCreacionAuditoria)}
+                      </label>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))
+              ))
           ) : (
             <div>No hay empleos disponibles en este momento.</div>
           )}
