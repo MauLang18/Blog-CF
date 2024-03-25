@@ -3,7 +3,7 @@ import { Footer } from "./components/footer/Footer.jsx";
 import { Header } from "./components/header/Header";
 import { Home } from "./pages/home/Home";
 import { Empleo } from "./pages/empleo/Empleo.jsx";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { DetailsPages } from "./pages/details/DetailsPages";
 import { DetailsPages2 } from "./pages/details/DetailsPages2";
 
