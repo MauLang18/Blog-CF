@@ -22,7 +22,7 @@ export const Footer = () => {
           <p className="text-sm text-black sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © {year} Grupo Castro Fallas |{" "}
             <a
-              href="https://customcode-2c2f5.web.app"
+              href="https://customcodecr.com"
               className="text-blue-500 font-bold hover:text-blue-700"
               target="blank"
             >
