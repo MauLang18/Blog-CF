@@ -13,7 +13,7 @@ export const Card = () => {
     const fetchNoticias = async () => {
       try {
         const response = await axios.get(
-          "https://api.logisticacastrofallas.com/api/Noticia"
+          "https://api.logisticacastrofallas.com/api/Noticia?Order=desc"
         );
         setNoticias(response.data.data);
         setIsLoading(false);
