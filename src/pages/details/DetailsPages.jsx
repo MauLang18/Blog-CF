@@ -33,7 +33,7 @@ export const DetailsPages = () => {
             <div className="right">
               <h1>{blogDetails.titulo}</h1>
               <h3>{blogDetails.subtitulo} </h3>
-              <p>{blogDetails.contenido}</p>
+              <p dangerouslySetInnerHTML={{ __html: blogDetails.contenido }} />
               <p>Autor: Grupo Castro Fallas</p>
             </div>
           </div>
