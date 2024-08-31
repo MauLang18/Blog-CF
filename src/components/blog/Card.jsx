@@ -60,7 +60,13 @@ export const Card = () => {
                     <Link to={`/details/${item.id}`} className="link">
                       <h3>{item.titulo}</h3>
                     </Link>
-                    <p dangerouslySetInnerHTML={{ __html: item.contenido.slice(0, 180) + "..." }} />
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: item.contenido
+                          ? item.contenido.slice(0, 180) + "..."
+                          : "Contenido no disponible",
+                      }}
+                    />
                     <div className="date">
                       <AiOutlineClockCircle className="icon" />{" "}
                       <label htmlFor="">
